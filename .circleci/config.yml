@@ -1,0 +1,12 @@
+version: 2.1
+orbs:
+  cypress: cypress-io/cypress@1.19.1
+workflows:
+    build-and-test:
+      jobs:
+        - cypress/run:
+            start: npm start
+            wait-on: '-c .circleci/wait-on-config.json http://localhost:8080'
+            post-steps:
+              - store_test_results:
+                  path: test-results
