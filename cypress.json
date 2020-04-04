@@ -1,0 +1,9 @@
+{
+    "projectId": "node-button",
+    "video": false,
+    "reporter": "junit",
+    "reporterOptions": {
+      "mochaFile": "test-results/junit/junit-mocha-report.xml",
+      "toConsole": true
+    }
+}
