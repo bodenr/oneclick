@@ -10,5 +10,13 @@
     <button id="messageButton">Click me!</button>
     <p id="messageText">Initial Text</p>
   </body>
-  <script src="client.js"></script>
+  <script type="text/javascript">
+    console.log('Client-side code running');
+
+    const button = document.getElementById('messageButton');
+    button.addEventListener('click', function(e) {
+      console.log('button was clicked');
+      document.getElementById("messageText").innerHTML = "Updated Text";
+    });
+  </script>
 </html>
