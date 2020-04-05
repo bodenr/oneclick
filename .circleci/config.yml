@@ -2,6 +2,7 @@ version: 2.1
 orbs:
   cypress: cypress-io/cypress@1.19.1
   aws-ecr: circleci/aws-ecr@6.8.1
+  aws-ecs: circleci/aws-ecs@1.1.0
 workflows:
     test-and-deploy:
       jobs:
@@ -19,3 +20,13 @@ workflows:
               - cypress/run
             context: aws-context
             repo: vspan
+        - aws-ecs/run-task:
+            requires:
+              - cypress/run
+              - aws-ecr/build-and-push-image
+            context: aws-context
+            cluster: web-cluster
+            task-definition: oneclick:1
+            subnet-ids: subnet-0960e67350afaea25
+            security-group-ids: sg-0b56758747b2446e9
+            assign-public-ip: ENABLED
