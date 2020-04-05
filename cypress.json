@@ -1,5 +1,5 @@
 {
-    "projectId": "node-button",
+    "projectId": "oneclick",
     "video": false,
     "reporter": "junit",
     "reporterOptions": {

@@ -1,5 +1,5 @@
 {
-  "name": "button",
+  "name": "oneclick",
   "version": "1.0.0",
   "description": "Bare bones html page with a button that changes text when clicked",
   "main": "server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bodenr/node-button.git"
+    "url": "git+https://github.com/bodenr/oneclick.git"
   },
   "author": "boden",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bodenr/node-button/issues"
+    "url": "https://github.com/bodenr/oneclick/issues"
   },
-  "homepage": "https://github.com/bodenr/node-button#readme",
+  "homepage": "https://github.com/bodenr/oneclick#readme",
   "dependencies": {
     "express": "^4.17.1"
   },
